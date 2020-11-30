@@ -1,10 +1,10 @@
 # mini-w-Aviel-Drori 
 
-This project is a cryptocurrency mini wallet application with react-native.
+    This project is a cryptocurrency mini wallet application with react-native.
 
-The app consists of four screens: AppLoading Screen, Main Screen, Detail Screen and Account Screen 
+    The app consists of four screens: AppLoading Screen, Main Screen, Detail Screen and Account Screen 
 
-## 1. AppLoadingn screen.
+## 1. AppLoading screen.
     This is a hidden screen that loads initial data after launching the app.
     1. Loads asyncStorage data for portfolio balance persistance between app sessions.
     2. Making Api call to fetch the conversion rates.
