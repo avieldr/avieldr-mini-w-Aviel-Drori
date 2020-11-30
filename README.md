@@ -32,7 +32,7 @@
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021506_Expo.jpg" width="200"  />
 </p>
 
-## 4. User Preferences - 
+## 4. Account Scren - 
     This screen is just a skeleton teaser to show mocking design ability.
 <p float="left">
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021513_Expo.jpg" width="200"  />
