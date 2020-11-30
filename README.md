@@ -1,7 +1,6 @@
 # mini-w-Aviel-Drori 
 
     This project is a cryptocurrency mini wallet application with react-native.
-
     The app consists of four screens: AppLoading Screen, Main Screen, Detail Screen and Account Screen 
 
 ## 1. AppLoading screen.
