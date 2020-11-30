@@ -10,7 +10,7 @@ The app consists of three screens: Main Screen, Detail Screen and Account Screen
    
     
 <p float="left">
-    <img src="https://github.com/avieldr/WeatherMe/blob/master/screenshots/home1.jpg" width="200"  />
+    <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021421_Expo.jpg" width="200"  />
     <img src="https://github.com/avieldr/WeatherMe/blob/master/screenshots/search.jpg" width="200" />
 </p>
    
