@@ -19,6 +19,8 @@ The app consists of three screens: Main Screen, Detail Screen and Account Screen
 <p float="left">
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021529_Expo.jpg" width="200"  />
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021441_Expo.jpg" width="200"  />
+</p>
+<p float="left">
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021647_Expo.jpg" width="200"  />
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021506_Expo.jpg" width="200"  />
 </p>
@@ -26,7 +28,6 @@ The app consists of three screens: Main Screen, Detail Screen and Account Screen
 ## 3. User Preferences - 
     This screen is just a teaser.
 <p float="left">
-    <img src="https://github.com/avieldr/WeatherMe/blob/master/screenshots/home-dark.jpg" width="200"  />
-    <img src="https://github.com/avieldr/WeatherMe/blob/master/screenshots/fav-dark1.jpg" width="200"  />
+    <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021513_Expo.jpg" width="200"  />
 </p>
 <img src="https://github.com/avieldr/WeatherMe/blob/master/screenshots/user_pref.jpg" width="200"  />
