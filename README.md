@@ -3,10 +3,10 @@
 This project is a cryptocurrency mini wallet application with react-native.
 
 The app consists of three screens: Main Screen, Detail Screen and Account Screen
-    
+
 ## 1. Main screen - User's balance overview.
   Displays the user's crypto assets info, for a given set of crypto coins.
-  While this screen is in focus
+  While this screen is in focus, the conversion rates are periodically fetched every 30 seconds.
    
     
 <p float="left">
@@ -15,6 +15,7 @@ The app consists of three screens: Main Screen, Detail Screen and Account Screen
    
 ## 2. Detail screen - For a given crypto coin, it shows buy / sell options. 
     Has the ability to remove items from the list and set item as main location on the main screen.
+    While this screen is in focus, the conversion rates are periodically fetched every 10 seconds.
     
 <p float="left">
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021529_Expo.jpg" width="200"  />
@@ -30,4 +31,3 @@ The app consists of three screens: Main Screen, Detail Screen and Account Screen
 <p float="left">
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021513_Expo.jpg" width="200"  />
 </p>
-<img src="https://github.com/avieldr/WeatherMe/blob/master/screenshots/user_pref.jpg" width="200"  />
