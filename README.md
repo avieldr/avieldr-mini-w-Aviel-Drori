@@ -22,6 +22,7 @@
 ## 3. Detail screen - For a given crypto coin, it shows buy / sell options. 
     Supplies buying / selling options for the user.
     While this screen is in focus, the conversion rates are periodically fetched every 10 seconds.
+    It displays error messages when user input is invalid.
     
 <p float="left">
     <img src="https://github.com/avieldr/avieldr-mini-w-Aviel-Drori/blob/main/screenshots/Screenshot_20201130-021529_Expo.jpg" width="200"  />
