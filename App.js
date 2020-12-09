@@ -5,13 +5,16 @@ import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { Icon } from 'react-native-elements'
 import { Provider } from 'react-redux'
 import store from './src/store'
+import { ThemeManager } from './src/components/ThemeManager'
+
 
 import AppLoadingScreen from './src/screens/AppLoadingScreen'
 import MainScreen from './src/screens/MainScreen'
 import SettingsScreen from './src/screens/SettingsScreen'
 import DetailScreen from './src/screens/DetailScreen'
 
-const mainFlow = createStackNavigator({
+
+const mainDetailStackFlow = createStackNavigator({
   main: MainScreen,
   detail: DetailScreen
 }, {
@@ -22,8 +25,8 @@ const mainFlow = createStackNavigator({
   }
 })
 
-const AppBodyFlow = createBottomTabNavigator({
-  main: mainFlow,
+const AppBodyTabsFlow = createBottomTabNavigator({
+  main: mainDetailStackFlow,
   settings: SettingsScreen,
 },
 {
@@ -36,14 +39,16 @@ const AppBodyFlow = createBottomTabNavigator({
 
 const switchNavigator = createSwitchNavigator({
   appLoading: AppLoadingScreen,
-  body: AppBodyFlow,
+  body: AppBodyTabsFlow,
 })
 
 const App = createAppContainer(switchNavigator)
 export default () => {
   return (
     <Provider store={store}>
-      <App />
+      <ThemeManager>
+        <App />
+      </ThemeManager>
     </Provider>
   )
 }

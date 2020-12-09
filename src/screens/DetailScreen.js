@@ -32,7 +32,8 @@ const INITIAL_STATE = {
     waiting: false
 }
 
-const TIMEOUT_INTERVAL = 10000
+const DETAIL_TIMEOUT_INTERVAL = 10000
+const GENERAL_TIMEOUT_INTERVAL = 30000
 
 const DetailScreen = (props) => {
 
@@ -40,13 +41,11 @@ const DetailScreen = (props) => {
     const [state, setState] = useState(INITIAL_STATE)
     
     useEffect(() => {
-        const didBlurSubscription = navigation.addListener('didFocus', () => {
-            if (settings.updateInterval !== TIMEOUT_INTERVAL) {
-                updateTimeoutInterval(TIMEOUT_INTERVAL)
-            }
-        })
-        return () => didBlurSubscription.remove()
-    })
+        updateTimeoutInterval(DETAIL_TIMEOUT_INTERVAL)
+        return () => {
+            updateTimeoutInterval(GENERAL_TIMEOUT_INTERVAL)
+        }
+    },[])
       
     const coinType = navigation.getParam('coin')
     const coinCode = CURRENCY_CODES[coinType]

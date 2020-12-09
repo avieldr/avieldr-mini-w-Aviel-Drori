@@ -1,120 +1,134 @@
 import React from 'react'
 import { View, Text, StyleSheet, SectionList, TouchableOpacity, Image } from 'react-native'
 import { Icon } from 'react-native-elements'
+import { useTheme } from '../components/ThemeManager'
 
-const DATA = [
-    {
-        title: "image-section",
-        data: []
-    },
-    {
-        title: "Security",
-        data: [
-            {
-                title: "Keyless Backup",
-                icon: {
-                    type: 'feather',
-                    name: 'shield'
-                }
-            }
-        ]
-    },
-    {
-        title: "Settings",
-        data: [
-            {
-                title: "Background",
-                icon: {
-                    type: 'feather',
-                    name: 'image'
-                }
-            },
-            {
-                title: "Local Currency",
-                icon: {
-                    type: 'feather',
-                    name: 'globe'
-                }
-            },
-        ]
-    },
-    {
-        title: "Other",
-        data: [
-            {
-                title: "Help Center",
-                icon: {
-                    type: 'feather',
-                    name: 'headphones'
-                }
-            },
-            {
-                title: "Rate Us",
-                icon: {
-                    type: 'feather',
-                    name: 'star'
-                }
-            },
-            {
-                title: "Take Survey",
-                icon: {
-                    type: 'feather',
-                    name: 'check-circle'
-                }
-            },
-            {
-                title: "Share Zengo",
-                icon: {
-                    type: 'feather',
-                    name: 'share-2'
-                }
-            },
-            {
-                title: "Export Activities",
-                icon: {
-                    type: 'feather',
-                    name: 'bell'
-                }
-            },
-            {
-                title: "About",
-                icon: {
-                    type: 'feather',
-                    name: 'info'
-                }
-            },
-        ]
-    },
-    {
-        title: "",
-        data: [
-            {
-                title: "Delete Account",
-                icon: {
-                    type: 'feather',
-                    name: 'user-x'
-                }
-            }
-        ]
-    },
-    {
-        title: "",
-        data: []
-    },
-]
+
+
 
 const SettingsScreen = () => {
 
-    const renderItem = (item) => {
+    const { themeType, toggleSelectionMode, themeValue: { mainScreenTheme }, toggleTheme } = useTheme()
+
+    const data = [
+        {
+            title: "image-section",
+            data: []
+        },
+        {
+            title: "Security",
+            data: [
+                {
+                    title: "Keyless Backup",
+                    icon: {
+                        type: 'feather',
+                        name: 'shield'
+                    },
+                    onPress: () => toggleSelectionMode()
+                }
+            ]
+        },
+        {
+            title: "Settings",
+            data: [
+                {
+                    title: "Background",
+                    icon: {
+                        type: 'feather',
+                        name: 'image'
+                    },
+                    onPress: () => toggleTheme()
+                },
+                {
+                    title: "Local Currency",
+                    icon: {
+                        type: 'feather',
+                        name: 'globe'
+                    }
+                },
+            ]
+        },
+        {
+            title: "Other",
+            data: [
+                {
+                    title: "Help Center",
+                    icon: {
+                        type: 'feather',
+                        name: 'headphones'
+                    }
+                },
+                {
+                    title: "Rate Us",
+                    icon: {
+                        type: 'feather',
+                        name: 'star'
+                    }
+                },
+                {
+                    title: "Take Survey",
+                    icon: {
+                        type: 'feather',
+                        name: 'check-circle'
+                    }
+                },
+                {
+                    title: "Share Zengo",
+                    icon: {
+                        type: 'feather',
+                        name: 'share-2'
+                    }
+                },
+                {
+                    title: "Export Activities",
+                    icon: {
+                        type: 'feather',
+                        name: 'bell'
+                    }
+                },
+                {
+                    title: "About",
+                    icon: {
+                        type: 'feather',
+                        name: 'info'
+                    }
+                },
+            ]
+        },
+        {
+            title: "",
+            data: [
+                {
+                    title: "Delete Account",
+                    icon: {
+                        type: 'feather',
+                        name: 'user-x'
+                    }
+                }
+            ]
+        },
+        {
+            title: "",
+            data: []
+        },
+    ]
+
+
+    const renderItem = ({ item }) => {
+        const onPressCallback = item.onPress
         return <TouchableOpacity 
             style={styles.item}
-            onPress={() => {console.log(item.item.title)}}
+            onPress={() => {
+                onPressCallback
+                ? onPressCallback()
+                : console.log(item.title)
+            }}
         >
             <View style={styles.iconContainer}>
-                <Icon name={item.item.icon.name} type={item.item.icon.type} size={20} color='#52C6B6'/>
+                <Icon name={item.icon.name} type={item.icon.type} size={20} color='#52C6B6'/>
             </View>
             
-            <Text>{item.item.title}</Text>
+            <Text>{item.title}</Text>
         </TouchableOpacity>
     }
     
@@ -139,7 +153,7 @@ const SettingsScreen = () => {
 
         <View style={styles.contentsContainer}>
         <SectionList
-            sections={DATA}
+            sections={data}
             keyExtractor={(item, index) => item + index}
             renderItem={renderItem}
             renderSectionHeader={(item) => {
